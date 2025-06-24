@@ -1,24 +1,16 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+this project demonstrates issue with administrate gem not able to work with a model named `Host`
 
-Things you may want to cover:
+```
+ActionController::UnfilteredParameters in Admin::Hosts#index
+Showing /Users/jurgen/.rbenv/versions/3.4.4/lib/ruby/gems/3.4.0/gems/administrate-0.19.0/app/views/administrate/application/_collection.html.erb where line #31 raised:
 
-* Ruby version
+unable to convert unpermitted parameters to hash
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+        convert_parameters_to_hashes(@parameters, :to_h, &block)
+      else
+        raise UnfilteredParameters
+      end
+    end
+```
